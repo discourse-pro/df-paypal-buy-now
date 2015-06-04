@@ -1,0 +1,7 @@
+(function() {
+	Discourse.Dialect.inlineReplace('[paypal]', function(text) {
+		return ['div', {'class': 'df-paypal-button'}];
+	});
+	Discourse.Markdown.whiteListTag('div', 'class', /^df-.*$/ );
+	//Discourse.Markdown.whiteListClass('df-paypal');
+})();

@@ -1,0 +1,7 @@
+plugins:
+  «PayPal_Buy_Now»_Enabled:
+    default: true
+    client: true
+  «PayPal_Buy_Now»_Button_Code:
+    default: ''
+    client: true
