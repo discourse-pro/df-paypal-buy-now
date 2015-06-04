@@ -1,0 +1,6 @@
+(function() {
+	Discourse.Dialect.inlineReplace('[]', function(text){
+		return ['span', {'class': 'df-test-1 df-test-2'}, 'ХУЙ!'];
+	});
+	Discourse.Markdown.whiteListTag('span', 'class', /^df-.*$/ );
+})();
