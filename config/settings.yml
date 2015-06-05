@@ -5,3 +5,4 @@ plugins:
   «PayPal_Buy_Now»_Button_Code:
     default: ''
     client: true
+    type: url_list

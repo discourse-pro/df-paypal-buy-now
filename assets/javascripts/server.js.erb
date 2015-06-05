@@ -1,7 +1,10 @@
 (function() {
-	Discourse.Dialect.inlineReplace('[paypal]', function(text) {
-		return ['div', {'class': 'df-paypal-button'}];
+	Discourse.Dialect.inlineRegexp({
+		start: '[paypal-'
+		, matcher: /\[paypal\-(\d+)]/g
+		, emitter: function(matches) {return [
+			'div', {'class': 'df-paypal-button df-paypal-button-' + matches[1]}];
+		}
 	});
 	Discourse.Markdown.whiteListTag('div', 'class', /^df-.*$/ );
-	//Discourse.Markdown.whiteListClass('df-paypal');
 })();

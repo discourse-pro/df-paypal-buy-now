@@ -1,4 +1,4 @@
 en:
   site_settings:
     «PayPal_Buy_Now»_Enabled: "Enable «<a href='http://discourse.pro/t/29'>PayPal Buy Now</a>» plugin."
-    «PayPal_Buy_Now»_Button_Code: "Insert here the button code produced by the <a href='https://www.paypal.com/in/cgi-bin/webscr?cmd=_singleitem-intro-outside'>PayPal Button Creation Tool</a>.<br/>After inserting do not edit the code manually.<br/>You can only replace it entirely by pasting from the PayPal Button Creation Tool once again."
+    «PayPal_Buy_Now»_Button_Code: "Insert here the button code produced by the <a href='https://www.paypal.com/in/cgi-bin/webscr?cmd=_singleitem-intro-outside'>PayPal Button Creation Tool</a>."
