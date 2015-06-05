@@ -1,3 +1,19 @@
 .df-paypal-button {
-	input[type='image'] {width: auto;}
+	form {
+		width: 250px;
+		text-align: center;
+		td {text-align: left;}
+		input[type='image'] {
+			width: auto;
+			// http://stackoverflow.com/a/8228702/254475
+			text-align: left;
+			display: inline-block;
+		}
+		select {
+			// http://stackoverflow.com/a/11162707/254475
+			white-space: nowrap;
+			width: 250px;
+		}
+		input[type='text'] {width: 240px;}
+	}
 }
