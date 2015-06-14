@@ -1,4 +1,4 @@
-plugins:
+paypal:
   «PayPal_Buy_Now»_Enabled:
     default: true
     client: true
