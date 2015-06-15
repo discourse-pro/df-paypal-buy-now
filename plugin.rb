@@ -5,3 +5,15 @@
 # url: https://discourse.pro/t/29
 register_asset 'javascripts/server.js.erb', :server_side
 register_asset 'stylesheets/main.scss'
+require 'site_setting_extension'
+SiteSettingExtension.module_eval do
+	alias_method :core__types, :types
+	def types
+		result = @types
+		if not result
+			result = core__types
+			result[:paypal_html] = result.length + 1;
+		end
+		return result
+	end
+end

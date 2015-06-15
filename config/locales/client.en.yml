@@ -2,4 +2,4 @@ en:
   admin_js:
     admin:
       site_settings:
-        add_url: "add item"
+        add_paypal_html: "insert a PayPal button code..."

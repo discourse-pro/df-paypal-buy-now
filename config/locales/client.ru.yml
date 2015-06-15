@@ -2,4 +2,4 @@ ru:
   admin_js:
     admin:
       site_settings:
-        add_url: "<пусто>"
+        add_paypal_html: "вставьте сюда код кнопки PayPal..."

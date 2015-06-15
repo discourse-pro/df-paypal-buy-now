@@ -5,4 +5,4 @@ paypal:
   «PayPal_Buy_Now»_Button_Code:
     default: ''
     client: true
-    type: host_list
+    type: paypal_html
