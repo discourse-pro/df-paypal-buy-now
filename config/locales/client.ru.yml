@@ -2,5 +2,7 @@ ru:
   admin_js:
     admin:
       site_settings:
+        categories:
+          paypal: 'PayPal'
         paypal_buy_now:
           placeholder: "вставьте сюда код кнопки PayPal..."
