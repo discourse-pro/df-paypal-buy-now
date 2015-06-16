@@ -1,42 +1,37 @@
 .paypal-buttons {
 	padding-right: 4px;
 	.item {
-		margin-bottom: 8px;
 		.row-1 {
 			width: 100%;
 			overflow: hidden;
-			margin-bottom: 4px;
-			input {
-				float: left;
-				width: 12em;
-				display: block;
-			}
-			button {
-				float: right;
-				//background: transparent;
-				//i.fa {color: rgb(145, 145, 145);}
-				/*&:hover {
-					i {
-						&.fa-plus {color: rgb(0, 136, 204);}
-						&.fa-times {color: #e45735;}
-					}
-				} */
-			}
+			margin-bottom: 0;
+			button {float: right;}
 		}
 		textarea {
 			width: 100%;
 			box-sizing: border-box;
-			height: 100px;
+			color: rgb(145, 145, 145);
+			&:active, &:hover, &:focus {color: #222222;}
+		}
+		input {
+			border: 0;
+			box-shadow: none;
+			padding: 0;
+			//color: rgb(145, 145, 145);
+			&:active, &:hover, &:focus {color: #222222;}
 		}
 	}
 	.items {
 		margin-bottom: 10px;
-		button {
-			background: transparent;
-			i.fa {color: rgb(145, 145, 145);}
-			&:hover {
-				i {
-					&.fa-times {color: #e45735;}
+		.item {
+			margin-bottom: 8px;
+			button {
+				background: transparent;
+				i.fa {color: rgb(145, 145, 145);}
+				&:hover {
+					i {
+						&.fa-times {color: #e45735;}
+					}
 				}
 			}
 		}

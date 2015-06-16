@@ -1,4 +1,4 @@
 ru:
   site_settings:
     «PayPal_Buy_Now»_Enabled: "Включить плагин «<a href='https://discourse.pro/t/29'>PayPal Buy Now</a>»?"
-    «PayPal_Buy_Now»_Button_Code: "Вставьте сюда код, который PayPal создаст для Вас посредством <a href='https://www.paypal.com/in/cgi-bin/webscr?cmd=_singleitem-intro-outside'>PayPal Button Creation Tool</a>."
+    «PayPal_Buy_Now»_Button_Code: "Вставьте сюда код, который PayPal создаст для Вас посредством <a href='https://www.paypal.com/in/cgi-bin/webscr?cmd=_singleitem-intro-outside'>PayPal Button Creation Tool</a>.<br/>Для вставки Вашей кнопки/формы в форумное сообщение используйте расположенный выше <a href='https://ru.wikipedia.org/wiki/BBCode'>bbCode</a>.<br/>Для редактирования bbCode кликните по нему."

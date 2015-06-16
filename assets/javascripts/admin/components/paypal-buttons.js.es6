@@ -59,9 +59,4 @@ export default Ember.Component.extend({
 		}
 	}
 	,inputInvalid: Ember.computed.empty('newHtml')
-	,keyDown(e) {
-		if (13 === e.keyCode) {
-			this.send('addItem');
-		}
-	}
 });
