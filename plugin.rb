@@ -1,6 +1,6 @@
 # name: df-paypal-buy-now
 # about: You can insert PayPal «Buy Now» button to your forum posts.
-# version: 1.0.0
+# version: 1.1.0
 # authors: Dmitry Fedyuk
 # url: https://discourse.pro/t/29
 register_asset 'javascripts/server.js.erb', :server_side
@@ -12,7 +12,7 @@ SiteSettingExtension.module_eval do
 		result = @types
 		if not result
 			result = core__types
-			result[:paypal_html] = result.length + 1;
+			result[:paypal_buttons] = result.length + 1;
 		end
 		return result
 	end

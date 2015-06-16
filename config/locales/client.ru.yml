@@ -2,4 +2,5 @@ ru:
   admin_js:
     admin:
       site_settings:
-        add_paypal_html: "вставьте сюда код кнопки PayPal..."
+        paypal_buy_now:
+          placeholder: "вставьте сюда код кнопки PayPal..."

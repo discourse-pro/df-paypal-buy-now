@@ -1,0 +1,30 @@
+{{#if items}}
+	<div class='items'>
+		{{#each item in items}}
+			<div class='item'>
+				<div class='row-1'>
+					{{input type='text' value=item.id}}
+					{{d-button
+						action='removeItem'
+						actionParam=item
+						icon='times'
+						class='btn-small no-text'
+					}}
+				</div>
+				{{textarea value=item.html}}
+			</div>
+		{{/each}}
+	</div>
+{{/if}}
+<div class='item'>
+	<div class='row-1'>
+		{{input value=newId}}
+		{{d-button
+			action='addItem'
+			icon='plus'
+			class='btn-primary btn-small no-text'
+			disabled=inputInvalid
+		}}
+	</div>
+	{{textarea value=newHtml}}
+</div>

@@ -2,4 +2,5 @@ en:
   admin_js:
     admin:
       site_settings:
-        add_paypal_html: "insert a PayPal button code..."
+        paypal_buy_now:
+          placeholder: "insert a PayPal button code here..."

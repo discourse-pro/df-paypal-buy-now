@@ -5,7 +5,7 @@ export default {name: 'paypal-buy-now', after: 'inject-objects', initialize: fun
 	SiteSetting.reopen({
 		partialType: function() {
 			let type = this.get('setting.type');
-			return 'paypal_html' === type ? type : this._super();
+			return 'paypal_buttons' === type ? type : this._super();
 		}.property('setting.type')
 	});
 	if (Discourse.SiteSettings['«PayPal_Buy_Now»_Enabled']) {
