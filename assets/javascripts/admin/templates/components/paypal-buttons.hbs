@@ -3,7 +3,7 @@
 		{{#each item in items}}
 			<div class='item'>
 				<div class='row-1'>
-					{{input type='text' autoresize=true value=item.id}}
+					{{input type='text' value=item.id autoresize=true}}
 					{{d-button
 						action='removeItem'
 						actionParam=item
@@ -12,7 +12,7 @@
 						title='admin.site_settings.paypal_buy_now.delete'
 					}}
 				</div>
-				{{textarea value=item.html}}
+				{{textarea value=item.html autoresize=true rows=2 max-rows=5}}
 			</div>
 		{{/each}}
 	</div>
@@ -28,5 +28,5 @@
 			title='admin.site_settings.paypal_buy_now.add'
 		}}
 	</div>
-	{{textarea value=newHtml}}
+	{{textarea value=newHtml autoresize=true rows=2 max-rows=5}}
 </div>
