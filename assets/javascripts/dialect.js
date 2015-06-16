@@ -13,7 +13,7 @@
 			var htmlA = valueS && valueS.length ? valueS.split("\n") : [];
 			items = [];
 			htmlA.forEach(function(html, index) {
-				items.push({id: 'paypal-%@'.fmt(1 + index), html: html});
+				items.push({id: 'paypal-' + (1 + index), html: html});
 			});
 		}
 		items.forEach(function(item) {
