@@ -4,7 +4,6 @@ export default Ember.Component.extend({
 	,layoutName: 'javascripts/admin/templates/components/paypal-buttons'
 	,_serialize: function() {this.set('valueS', JSON.stringify(this.get('items')));}
 	,onInit: function() {
-		//Ember.run.once(this, '_serialize');
 		/** @type {String} */
 		const valueS = this.get('valueS');
 		/** @type {Object[]} */
