@@ -4,6 +4,7 @@
 # authors: Dmitry Fedyuk
 # url: https://discourse.pro/t/29
 register_asset 'javascripts/dialect.js', :server_side
+register_asset 'javascripts/autogrow.js'
 register_asset 'stylesheets/main.scss'
 require 'site_setting_extension'
 SiteSettingExtension.module_eval do

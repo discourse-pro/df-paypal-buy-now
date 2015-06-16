@@ -11,7 +11,17 @@
 				width: 12em;
 				display: block;
 			}
-			button {float: right;}
+			button {
+				float: right;
+				//background: transparent;
+				//i.fa {color: rgb(145, 145, 145);}
+				/*&:hover {
+					i {
+						&.fa-plus {color: rgb(0, 136, 204);}
+						&.fa-times {color: #e45735;}
+					}
+				} */
+			}
 		}
 		textarea {
 			width: 100%;
@@ -23,8 +33,12 @@
 		margin-bottom: 10px;
 		button {
 			background: transparent;
-			&:hover {background: #e9e9e9;}
-			i.fa {color: #e45735;}
+			i.fa {color: rgb(145, 145, 145);}
+			&:hover {
+				i {
+					&.fa-times {color: #e45735;}
+				}
+			}
 		}
 	}
 }

@@ -5,4 +5,6 @@ en:
         categories:
           paypal: 'PayPal'
         paypal_buy_now:
-          placeholder: "insert a PayPal button code here..."
+          add: 'Add a Row'
+          delete: 'Delete the Button'
+          placeholder: 'place a PayPal button code here...'

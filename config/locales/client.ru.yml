@@ -5,4 +5,6 @@ ru:
         categories:
           paypal: 'PayPal'
         paypal_buy_now:
-          placeholder: "вставьте сюда код кнопки PayPal..."
+          add: 'добавить форму для вставки кнопки'
+          delete: 'удалить кнопку'
+          placeholder: 'вставьте сюда код кнопки PayPal...'

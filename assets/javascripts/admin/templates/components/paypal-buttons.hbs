@@ -9,6 +9,7 @@
 						actionParam=item
 						icon='times'
 						class='btn-small no-text'
+						title='admin.site_settings.paypal_buy_now.delete'
 					}}
 				</div>
 				{{textarea value=item.html}}
@@ -16,7 +17,7 @@
 		{{/each}}
 	</div>
 {{/if}}
-<div class='item'>
+<div class='item item-new'>
 	<div class='row-1'>
 		{{input value=newId}}
 		{{d-button
@@ -24,6 +25,7 @@
 			icon='plus'
 			class='btn-primary btn-small no-text'
 			disabled=inputInvalid
+			title='admin.site_settings.paypal_buy_now.add'
 		}}
 	</div>
 	{{textarea value=newHtml}}
