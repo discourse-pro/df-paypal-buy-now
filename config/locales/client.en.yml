@@ -2,8 +2,6 @@ en:
   admin_js:
     admin:
       site_settings:
-        categories:
-          paypal: 'PayPal'
         paypal_buy_now:
           add: 'Add a Row'
           delete: 'Delete the Button'

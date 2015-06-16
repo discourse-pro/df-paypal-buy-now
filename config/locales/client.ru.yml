@@ -2,8 +2,6 @@ ru:
   admin_js:
     admin:
       site_settings:
-        categories:
-          paypal: 'PayPal'
         paypal_buy_now:
           add: 'добавить форму для вставки кнопки'
           delete: 'удалить кнопку'
