@@ -1,13 +1,15 @@
 import { decorateCooked } from 'discourse/lib/plugin-api';
-import SiteSetting from 'admin/components/site-setting';
+//import SiteSetting from 'admin/components/site-setting';
 let _buttonsMap;
 export default {name: 'paypal-buy-now', after: 'inject-objects', initialize: function (container) {
-	SiteSetting.reopen({
-		partialType: function() {
-			let type = this.get('setting.type');
-			return 'paypal_buttons' === type ? type : this._super();
-		}.property('setting.type')
-	});
+	if ('undefined' !== typeof SiteSetting) {
+		SiteSetting.reopen({
+			partialType: function() {
+				let type = this.get('setting.type');
+				return 'paypal_buttons' === type ? type : this._super();
+			}.property('setting.type')
+		});
+	}
 	if (Discourse.SiteSettings['«PayPal_Buy_Now»_Enabled']) {
 		decorateCooked(container, function($post) {
 			if (!_buttonsMap) {
