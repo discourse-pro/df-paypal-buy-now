@@ -9,7 +9,6 @@ export default Ember.Component.extend({
   	 * ,layoutName: 'javascripts/admin/templates/components/paypal-buttons'
   	 * Now I save the explicit method for history only. May be it will be useful sometimes.
   	 */
-	,_serialize: function() {this.set('valueS', JSON.stringify(this.get('items')));}
 	,onInit: function() {
 		/** @type {String} */
 		const valueS = this.get('valueS');
@@ -34,12 +33,9 @@ export default Ember.Component.extend({
 	}.on('init')//.observes('valueS')
 	,_changed: function() {
 		if (this.get('initialized')) {
-			/**
-			 * 2015-06-30
-			 * Вроде бы в Ember.run.once метод можно передать прямо в виде его тела.
-			 * @link http://stackoverflow.com/a/19260106/254475
-			 */
-			Ember.run.once(this, '_serialize');
+			Ember.run.once(this, function() {
+				this.set('valueS', JSON.stringify(this.get('items')));
+			});
 		}
 	}.observes('items.@each', 'items.@each.id', 'items.@each.html')
 	,initNewButton: function() {
