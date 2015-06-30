@@ -34,6 +34,11 @@ export default Ember.Component.extend({
 	}.on('init')//.observes('valueS')
 	,_changed: function() {
 		if (this.get('initialized')) {
+			/**
+			 * 2015-06-30
+			 * Вроде бы в Ember.run.once метод можно передать прямо в виде его тела.
+			 * @link http://stackoverflow.com/a/19260106/254475
+			 */
 			Ember.run.once(this, '_serialize');
 		}
 	}.observes('items.@each', 'items.@each.id', 'items.@each.html')
