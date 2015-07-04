@@ -1,5 +1,5 @@
 export default Ember.Component.extend({
-	classNameBindings: [':paypal-buttons']
+	classNames: ['paypal-buttons']
 	/**
   	 * 2015-06-29
   	 * Discourse expects the components's template at
