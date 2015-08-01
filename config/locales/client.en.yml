@@ -2,6 +2,8 @@ en:
   admin_js:
     admin:
       site_settings:
+        categories:
+          df_paypal_buy_now: 'Discourse.PRO PayPal «Buy Now»'
         paypal_buy_now:
           add: 'Add a Row'
           delete: 'Delete the Button'

@@ -1,4 +1,4 @@
-paypal:
+df_paypal_buy_now:
   «PayPal_Buy_Now»_Enabled:
     default: true
     client: true
