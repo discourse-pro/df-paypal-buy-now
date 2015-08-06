@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   	 * Discourse expects the components's template at
   	 * plugins/df-paypal-buy-now/assets/javascripts/discourse/templates/components/paypal-buttons.hbs
   	 * Until I know it I used to specify template location explicitly:
-  	 * @link http://stackoverflow.com/a/24271614/254475
+  	 * @link http://stackoverflow.com/a/24271614
   	 * ,layoutName: 'javascripts/admin/templates/components/paypal-buttons'
   	 * Now I save the explicit method for history only. May be it will be useful sometimes.
   	 */
@@ -48,7 +48,7 @@ export default Ember.Component.extend({
 			var matches = item.id.match(/^paypal-(\d+)/);
 			return !matches || (2 > matches.length) ? 0 : parseInt(matches[1]);
 		});
-		/** @link http://stackoverflow.com/a/6102340/254475 */
+		/** @link http://stackoverflow.com/a/6102340 */
 		var max = !existingIds.length ? 0 : Math.max.apply(Math, existingIds);
 		return 'paypal-' + (max + 1);
 	}
