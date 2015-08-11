@@ -1,5 +1,5 @@
 en:
   site_settings:
     «PayPal_Buy_Now»_Enabled: "Enable «<a href='https://discourse.pro/t/29'>PayPal Buy Now</a>» plugin."
-    «PayPal_Buy_Now»_Require_the_options_to_be_specified: "«<a href='https://www.paypal.com/webapps/mpp/get-started/buy-now-button#step-7'>How to create options</a>»."
+    «PayPal_Buy_Now»_Require_the_options_to_be_specified: "<a href='https://www.paypal.com/webapps/mpp/get-started/buy-now-button#step-7'>How to create options</a>."
     «PayPal_Buy_Now»_Button_Code: "Paste here a button code produced by the <a href='https://www.paypal.com/in/cgi-bin/webscr?cmd=_singleitem-intro-outside'>PayPal Button Creation Tool</a>.<br/>Use the <a href='https://en.wikipedia.org/wiki/BBCode'>BBCode</a> (shown above textarea) to place your button to a post.<br/>Click the BBCode to edit it.<br/>If you have changed an already published BBCode, please rebake forum posts:<br/><code>docker exec -it app rake posts:rebake</code>"
