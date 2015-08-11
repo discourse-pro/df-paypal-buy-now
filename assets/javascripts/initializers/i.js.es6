@@ -41,13 +41,35 @@ const onDecorateCooked = function($post) {
 			_buttonsMap[item.id] = item.html;
 		});
 	}
+	/** @type {Boolean} */
+	const require = Discourse.SiteSettings['«PayPal_Buy_Now»_Require_the_options_to_be_specified'];
 	$('.df-paypal-button', $post).each(function() {
+		/** @type {String[]} */
 		const classesA = this.className.split(/\s+/);
 		if (classesA.length) {
+			/** @type {String} */
 			const id = classesA[classesA.length - 1];
+			/** @type {?String} */
 			const html = _buttonsMap[id];
 			if (html) {
-				$(this).html(html);
+				/** @type {jQuery} HTMLDivElement */
+				const $this = $(this);
+				$this.html(html);
+				if (require) {
+					/** @type {jQuery} HTMLFormElement */
+					const $form = $('form', $this);
+					/** @type {jQuery} HTMLInputElement[] */
+					const $inputs = $(':input', $form).not(':hidden,:image,:submit');
+					$inputs.change(function() {$(this).removeClass('df-invalid');});
+					$form.submit(function(event) {
+						/** @type {jQuery} HTMLInputElement[] */
+						const $invalid = $inputs.filter(function(){return !$(this).val();});
+						if ($invalid.length) {
+							$invalid.addClass('df-invalid');
+							event.preventDefault();
+						}
+					});
+				}
 			}
 		}
 	});

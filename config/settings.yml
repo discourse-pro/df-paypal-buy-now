@@ -2,6 +2,9 @@ df_paypal_buy_now:
   «PayPal_Buy_Now»_Enabled:
     default: true
     client: true
+  «PayPal_Buy_Now»_Require_the_options_to_be_specified:
+    default: true
+    client: true
   «PayPal_Buy_Now»_Button_Code:
     default: ''
     client: true

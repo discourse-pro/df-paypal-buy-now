@@ -1,4 +1,5 @@
 ru:
   site_settings:
     «PayPal_Buy_Now»_Enabled: "Включить плагин «<a href='https://discourse.pro/t/29'>PayPal Buy Now</a>»?"
+    «PayPal_Buy_Now»_Require_the_options_to_be_specified: "Требовать ли указания опций?<br/>«<a href='https://www.paypal.com/webapps/mpp/get-started/buy-now-button#step-7'>Как создать опции</a>»."
     «PayPal_Buy_Now»_Button_Code: "Вставьте сюда код, который PayPal создаст для Вас посредством <a href='https://www.paypal.com/in/cgi-bin/webscr?cmd=_singleitem-intro-outside'>PayPal Button Creation Tool</a>.<br/>Для вставки Вашей кнопки/формы в форумное сообщение используйте расположенный выше <a href='https://ru.wikipedia.org/wiki/BBCode'>bbCode</a>.<br/>Для редактирования bbCode кликните по нему.<br/>Если Вы измении уже опубликованный на форуме BBCode, то выполните rebake:<br/><code>docker exec -it app rake posts:rebake</code>"
