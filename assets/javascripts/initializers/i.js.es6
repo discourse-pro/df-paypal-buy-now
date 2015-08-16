@@ -1,5 +1,5 @@
 import {decorateCooked} from 'discourse/lib/plugin-api';
-export default {name: 'df-paypal-buy-now', after: 'inject-objects', initialize: function (c) {
+export default {name: 'df-paypal-buy-now', initialize: function (c) {
 	if (Discourse.SiteSettings['«PayPal_Buy_Now»_Enabled']) {
 		decorateCooked(c, onDecorateCooked);
 	}
