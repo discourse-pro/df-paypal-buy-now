@@ -1,14 +1,5 @@
 export default Ember.Component.extend({
 	classNames: ['paypal-buttons']
-	/**
-  	 * 2015-06-29
-  	 * Discourse expects the components's template at
-  	 * plugins/df-paypal-buy-now/assets/javascripts/discourse/templates/components/paypal-buttons.hbs
-  	 * Until I know it I used to specify template location explicitly:
-  	 * @link http://stackoverflow.com/a/24271614
-  	 * ,layoutName: 'javascripts/admin/templates/components/paypal-buttons'
-  	 * Now I save the explicit method for history only. May be it will be useful sometimes.
-  	 */
 	,onInit: function() {
 		/** @type {String} */
 		const valueS = this.get('valueS');
