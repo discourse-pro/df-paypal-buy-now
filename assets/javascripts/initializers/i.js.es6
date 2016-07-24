@@ -1,7 +1,9 @@
-import {decorateCooked} from 'discourse/lib/plugin-api';
-export default {name: 'df-paypal-buy-now', initialize(c) {
+import {withPluginApi} from 'discourse/lib/plugin-api';
+export default {name: 'df-paypal-buy-now', initialize() {
 	if (Discourse.SiteSettings['«PayPal_Buy_Now»_Enabled']) {
-		decorateCooked(c, onDecorateCooked);
+		withPluginApi('0.1', api => {
+			api.decorateCooked(onDecorateCooked);
+		});
 	}
 }};
 let _buttonsMap;
