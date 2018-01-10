@@ -1,9 +1,18 @@
 function textPostProcess(content, state, ruler) {
 	var buttons = state.md.options.discourse.dfPayPalButtons;
+	var originalContent = content;
 	buttons.forEach(function(button) {
-		content = content.replace('[' + button.id + ']', '<div class="df-paypal-button ' + button.id + '"></div>');
+		var from = '[' + button.id + ']';
+		if (-1 !== content.indexOf(from)) {
+			content = content.replace(from, '<div class="df-paypal-button ' + button.id + '"></div>');
+		}
 	});
-	return content;
+	debugger;
+	if (content === originalContent) {
+		let token = new state.Token('text', '', 0);
+		token.content = content;
+		return [].push(content);
+	}
 }
 //noinspection FunctionWithInconsistentReturnsJS
 export function setup(helper) {
