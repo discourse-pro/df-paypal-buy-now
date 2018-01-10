@@ -28,11 +28,11 @@ export function setup(helper) {
 	helper.whiteList({custom(tag, name, value) {
 		return 'div' === tag && 'class' == name && 0 === value.indexOf('df-');
 	}});
-	helper.registerPlugin(md => {
+	/*helper.registerPlugin(md => {
 		const ruler = md.core.textPostProcess.ruler;
 		const replacer = (content, state) => textPostProcess(content, state, ruler);
 		md.core.ruler.push('df-paypal-buy-now', state =>
 			md.options.discourse.helpers.textReplace(state, replacer, true)
 		);
-	});
+	}); */
 }
