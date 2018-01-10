@@ -9,9 +9,11 @@ function textPostProcess(content, state, ruler) {
 	});
 	debugger;
 	if (content === originalContent) {
-		let token = new state.Token('text', '', 0);
+		var token = new state.Token('text', '', 0);
 		token.content = content;
-		return [].push(content);
+		var result = [];
+		result.push(content);
+		return result;
 	}
 }
 //noinspection FunctionWithInconsistentReturnsJS
