@@ -15,6 +15,7 @@ export function setup(helper) {
 		try {items = JSON.parse(valueS);}
 		catch(ignore) {items = [];}
 		// 2019-12-08 «_.object is not a function»: https://github.com/discourse-pro/df-paypal-buy-now/issues/2
+		debugger;
 		opts.dfPayPalButtons = _.zipObject(_.map(items, item => ['[' + item.id + ']', item.id]));
 	});
 	helper.whiteList({custom(tag, name, value) {
