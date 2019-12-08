@@ -14,7 +14,8 @@ export function setup(helper) {
 		/** @type {Object[]} */ var items;
 		try {items = JSON.parse(valueS);}
 		catch(ignore) {items = [];}
-		opts.dfPayPalButtons = _.object(_.map(items, item => ['[' + item.id + ']', item.id]));
+		// 2019-12-08 «_.object is not a function»: https://github.com/discourse-pro/df-paypal-buy-now/issues/2
+		opts.dfPayPalButtons = _.zipObject(_.map(items, item => ['[' + item.id + ']', item.id]));
 	});
 	helper.whiteList({custom(tag, name, value) {
 		return 'div' === tag && 'class' == name && 0 === value.indexOf('df-');
