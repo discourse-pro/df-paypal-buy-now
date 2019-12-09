@@ -12,12 +12,12 @@ function textPostProcess(content, state) {
 // 2019-12-09
 // 1) «_.zipObject is not a function»: https://github.com/discourse-pro/df-paypal-buy-now/issues/3
 // 2) Discourse uses a reduced version of Lodash (without `zipObject`).
-function zipObject(props, values) {
+function zipObject(a) {
 	var r = {};
-	const l = props.length;
-	const l2 = values.length;
+	const l = a.length;
 	for (var i = 0; i < l; i++) {
-		r[props[i]] = i < l2 ? values[i] : null;
+		var v = a[i];
+		r[v[0]] = v[1];
 	}
 	return r;
 }
