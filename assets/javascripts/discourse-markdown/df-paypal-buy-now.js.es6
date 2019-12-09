@@ -8,16 +8,21 @@ function textPostProcess(content, state) {
 	}
 	return result;
 }
-export function setup(helper) {
-	// 2019-12-08
-	// 1) «_.zipObject is not a function»: https://github.com/discourse-pro/df-paypal-buy-now/issues/3
-	// 2) Discourse uses a reduced version of Lodash (without `zipObject`).
-	const zipObject = (props, values) => {
-		return props.reduce((prev, prop, i) => {
-			return Object.assign(prev, {[prop]: values[i]});
-		}, {});
-	};
 
+// 2019-12-09
+// 1) «_.zipObject is not a function»: https://github.com/discourse-pro/df-paypal-buy-now/issues/3
+// 2) Discourse uses a reduced version of Lodash (without `zipObject`).
+function zipObject(props, values) {
+	var r = {};
+	const l = props.length;
+	const l2 = values.length;
+	for (var i = 0; i < l; i++) {
+		r[props[i]] = i < l2 ? values[i] : null;
+	}
+	return r;
+}
+
+export function setup(helper) {
 	helper.registerOptions((opts, siteSettings) => {
 		var valueS = siteSettings['«PayPal_Buy_Now»_Button_Code'];
 		/** @type {Object[]} */ var items;
